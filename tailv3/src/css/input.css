@@ -1,0 +1,3 @@
+@tailwind base; /* html tags: ul, div, span, h1, h2 etc */
+@tailwind components; /* commonly used components: button, forms, cards, etc */
+@tailwind utilities; /* padding, margin, colors etc. text-xl, font-bold, p-2 my-2*/
