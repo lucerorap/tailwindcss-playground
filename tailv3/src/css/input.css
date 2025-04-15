@@ -1,3 +1,19 @@
-@tailwind base; /* html tags: ul, div, span, h1, h2 etc */
-@tailwind components; /* commonly used components: button, forms, cards, etc */
-@tailwind utilities; /* padding, margin, colors etc. text-xl, font-bold, p-2 my-2*/
+@import 'tailwindcss'; /* html tags: ul, div, span, h1, h2 etc */ /* commonly used components: button, forms, cards, etc */ /* padding, margin, colors etc. text-xl, font-bold, p-2 my-2*/
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
