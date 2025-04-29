@@ -22,8 +22,6 @@
     --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
-    --color-yellow-600: oklch(68.1% 0.162 75.834);
-    --color-yellow-800: oklch(47.6% 0.114 61.907);
     --color-green-300: oklch(87.1% 0.15 154.449);
     --color-emerald-400: oklch(76.5% 0.177 163.223);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
@@ -68,6 +66,8 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-paci: "Pacifico";
+    --color-redish-200: oklch(0.69 0.1 30);
+    --color-redish-500: oklch(0.69 0.25 30);
   }
 }
 @layer base {
@@ -313,6 +313,12 @@
   .bg-rose-400 {
     background-color: var(--color-rose-400);
   }
+  .red-fade-200 {
+    background-color: var(--color-redish-200);
+  }
+  .red-fade-500 {
+    background-color: var(--color-redish-500);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -480,18 +486,6 @@
     --tw-shadow-color: color-mix(in srgb, #000 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 20%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
-  .shadow-black\/50 {
-    --tw-shadow-color: color-mix(in srgb, #000 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-black) 50%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
-  .shadow-red-500 {
-    --tw-shadow-color: oklch(63.7% 0.237 25.331);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-red-500) var(--tw-shadow-alpha), transparent);
     }
   }
   .shadow-red-500\/50 {

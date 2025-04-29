@@ -4,4 +4,13 @@
 
 @theme {
   --font-paci: "Pacifico";
+  --color-redish-100: oklch(0.69 0.05 30);
+  --color-redish-200: oklch(0.69 0.1 30);
+  --color-redish-300: oklch(0.69 0.15 30);
+  --color-redish-400: oklch(0.69 0.2 30);
+  --color-redish-500: oklch(0.69 0.25 30);
+}
+
+@utility red-fade-* {
+  background-color: --value(--color-redish-*);
 }
